@@ -1,0 +1,77 @@
+.pagina{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 50em;
+  width: 100%;
+}
+
+.lista-naipes,
+.lista-numeros {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+button {
+  margin: 0.5em;
+  padding: 0.5em 0.5em;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  border-color: #ccc;
+  border-radius: 0.5em;
+  font-size: 1.2em;
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: lightyellow;
+}
+
+.lista-naipes button {
+  flex: 1;
+}
+
+.lista-numeros button {
+  flex: 0 0 3em;
+  width: 3em;
+}
+
+.lista-numeros button:nth-child(n+11) {
+  flex-basis: 3em;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.carta {
+  background-color: white;
+  margin: 2em auto 0 auto;
+  padding: 0.5em;
+  width: 4em;
+  height: 6em;
+  border-style: solid;
+  border-width: thin;
+  border-color: #ccc;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.naipe {
+  text-align: center;
+  font-size: 2em;
+}
+
+.numero {
+  height: 1em;
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  width: 100%;
+}

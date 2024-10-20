@@ -1,0 +1,25 @@
+<div class="pagina">
+  <nav class="lista-naipes">
+    @for (np of naipes; track $index) {
+      <button type="button" (click)="naipe = np">
+        {{np.simbolo}}
+      </button>
+    }
+  </nav>
+  <nav class="lista-numeros">
+    @for (nr of numeros; track $index) {
+      <button type="button" (click)="numero = nr">
+        {{nr.nome}}
+      </button>
+    }
+  </nav>
+  @if (naipe && numero) {
+    <header>
+      <div class="carta">
+        <div class="numero">{{ numero.nome }}</div>
+        <div class="naipe">{{ naipe.simbolo }}</div>
+        <div class="numero"></div>
+      </div>
+    </header>
+  }
+</div>
