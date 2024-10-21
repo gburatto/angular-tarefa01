@@ -37,4 +37,12 @@ export class EscolhaCartaComponent {
   public naipe?: Naipe;
   public numero?: Numero;
 
+  public getClassNamePorNaipe(naipe: string): string {
+    if (naipe == 'copas' || naipe == 'ouro') {
+      return 'vermelho';
+    } else {
+      return 'preto';
+    }
+  }
+
 }

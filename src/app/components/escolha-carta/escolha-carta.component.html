@@ -1,7 +1,7 @@
 <div class="pagina">
   <nav class="lista-naipes">
     @for (np of naipes; track $index) {
-      <button type="button" (click)="naipe = np">
+      <button [className]="getClassNamePorNaipe(np.nome)" type="button" (click)="naipe = np">
         {{np.simbolo}}
       </button>
     }
@@ -14,7 +14,7 @@
     }
   </nav>
   @if (naipe && numero) {
-    <header>
+    <header [className]="getClassNamePorNaipe(naipe.nome)">
       <div class="carta">
         <div class="numero">{{ numero.nome }}</div>
         <div class="naipe">{{ naipe.simbolo }}</div>
