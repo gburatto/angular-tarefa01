@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { Naipe } from '../../models/naipe';
 import { Numero } from '../../models/numero';
+import { ClassNamePorNaipePipe } from '../../pipes/class-name-por-naipe.pipe';
 
 @Component({
   selector: 'app-escolha-carta',
   standalone: true,
-  imports: [],
+  imports: [
+    ClassNamePorNaipePipe,
+  ],
   templateUrl: './escolha-carta.component.html',
   styleUrl: './escolha-carta.component.css'
 })
@@ -36,13 +39,5 @@ export class EscolhaCartaComponent {
 
   public naipe?: Naipe;
   public numero?: Numero;
-
-  public getClassNamePorNaipe(naipe: string): string {
-    if (naipe == 'copas' || naipe == 'ouro') {
-      return 'vermelho';
-    } else {
-      return 'preto';
-    }
-  }
 
 }
