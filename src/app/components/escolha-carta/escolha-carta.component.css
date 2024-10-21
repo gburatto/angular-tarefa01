@@ -13,6 +13,7 @@
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
+  margin-top: 0.8em;
 }
 
 button {
@@ -29,6 +30,10 @@ button {
 
 button:hover {
   background-color: lightyellow;
+}
+
+button:active {
+  background-color: #c5ffc5;
 }
 
 .lista-naipes button {
@@ -48,7 +53,8 @@ button:hover {
 
 .carta {
   background-color: white;
-  margin: 2em auto 0 auto;
+  font-weight: bold;
+  margin: 3em auto 0 auto;
   padding: 0.5em;
   width: 4em;
   height: 6em;
